@@ -6,9 +6,8 @@ import Search from '@/pages/Search.vue'
 import Wishlist from '@/pages/Wishlist.vue'
 import { isLoggedIn } from '@/utils/auth'
 
-
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/signin', component: SignIn },
     { path: '/', component: Home },
@@ -31,4 +30,3 @@ router.beforeEach((to, from, next) => {
 })
 
 export default router
-
