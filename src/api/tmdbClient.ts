@@ -8,10 +8,10 @@ export const tmdb = axios.create({
 })
 
 tmdb.interceptors.request.use((config) => {
-  // 과제 요구: 로그인하면 localStorage의 TMDb-Key 사용 가능
-  const stored = localStorage.getItem('TMDb-Key')
-  const fallback = import.meta.env.VITE_TMDB_API_KEY
-  const apiKey = stored || fallback
+  // ✅ v3 API KEY 방식
+  const apiKey =
+    localStorage.getItem('TMDb-Key') ||
+    import.meta.env.VITE_TMDB_API_KEY
 
   config.params = {
     ...(config.params || {}),
