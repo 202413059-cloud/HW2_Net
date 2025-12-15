@@ -8,17 +8,14 @@ export const tmdb = axios.create({
 })
 
 tmdb.interceptors.request.use((config) => {
-  // ✅ TMDB v4 Read Access Token
-  const token =
-    localStorage.getItem('TMDb-Key') || import.meta.env.VITE_TMDB_API_KEY
-
-  config.headers = {
-    ...(config.headers || {}),
-    Authorization: `Bearer ${token}`,
-  }
+  // ✅ v3 API KEY 방식
+  const apiKey =
+    localStorage.getItem('TMDb-Key') ||
+    import.meta.env.VITE_TMDB_API_KEY
 
   config.params = {
     ...(config.params || {}),
+    api_key: apiKey,
     language: 'ko-KR',
   }
 
