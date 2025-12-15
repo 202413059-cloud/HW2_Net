@@ -24,10 +24,10 @@ watchEffect(() => {
   liked.value = isWishlisted(props.movie.id)
 })
 
+
 const posterUrl = computed(() => {
   if (!props.movie.poster_path) return ''
-  const base = import.meta.env.VITE_TMDB_IMG
-  return `${base}/w342${props.movie.poster_path}`
+  return `https://image.tmdb.org/t/p/w342${props.movie.poster_path}`
 })
 
 function toggle() {
@@ -35,6 +35,7 @@ function toggle() {
   emit('changed')
 }
 </script>
+
 
 <style scoped>
 .card {
