@@ -28,6 +28,8 @@ const loading = reactive({
 async function load() {
   loading.popular = loading.nowPlaying = loading.topRated = loading.upcoming = true
 
+  await new Promise(r => setTimeout(r, 1500))
+
   const p1 = fetchMovies(endpoints.popular().url, endpoints.popular().params).then(d => (popular.value = d.results)).finally(() => (loading.popular = false))
   const p2 = fetchMovies(endpoints.nowPlaying().url, endpoints.nowPlaying().params).then(d => (nowPlaying.value = d.results)).finally(() => (loading.nowPlaying = false))
   const p3 = fetchMovies(endpoints.topRated().url, endpoints.topRated().params).then(d => (topRated.value = d.results)).finally(() => (loading.topRated = false))
