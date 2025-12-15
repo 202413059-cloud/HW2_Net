@@ -73,7 +73,6 @@ function submit() {
   }
 
   localStorage.setItem('auth', JSON.stringify({ email: user.id }))
-  localStorage.setItem('TMDb-Key', user.password)
 
   router.push('/')
 }
