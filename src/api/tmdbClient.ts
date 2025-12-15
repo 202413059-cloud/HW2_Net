@@ -1,17 +1,14 @@
 import axios from 'axios'
 
-const baseURL = import.meta.env.VITE_TMDB_BASE_URL
-
 export const tmdb = axios.create({
-  baseURL,
+  baseURL: 'https://api.themoviedb.org/3',
   timeout: 10000,
 })
 
 tmdb.interceptors.request.use((config) => {
-  // ✅ v3 API KEY 방식
   const apiKey =
     localStorage.getItem('TMDb-Key') ||
-    import.meta.env.VITE_TMDB_API_KEY
+    '843ec3cbf904e77356554b52273b8132' // ⬅️ 과제용 fallback (v3 key)
 
   config.params = {
     ...(config.params || {}),
