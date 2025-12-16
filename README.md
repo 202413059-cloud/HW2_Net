@@ -149,9 +149,9 @@ npm run build
 
 ---
 
-## 9. AI(ChatGPT) 활용 내역
+## 9. AI 활용 내역
 
-개발 전반에서 ChatGPT를 적극 활용하였습니다.
+개발 전반에서 ChatGPT, Gemini를 적극 활용하였습니다.
 
 * Vue 3 Composition API 구조 설계
 * TMDB API 인증 방식(v3 / v4) 문제 해결
