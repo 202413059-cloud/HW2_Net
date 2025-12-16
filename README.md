@@ -2,7 +2,7 @@
 
 ---
 
-```md
+md
 # Netflix-like Front-End Demo Site (WSD Assignment 02)
 
 Vue 3 + Vite 기반으로 제작한 **Netflix 유사 Front-End Demo SPA**입니다.  
