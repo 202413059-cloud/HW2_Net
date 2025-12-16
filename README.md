@@ -18,7 +18,7 @@ GitHub Pages + GitHub Actions를 통해 정적 웹사이트 자동 배포를 구
 - TMDB API 연동을 통한 비동기 데이터 처리
 - LocalStorage 기반 사용자 상태 및 데이터 관리
 - Gitflow 전략 및 GitHub Pages 배포 자동화
-- GPT(ChatGPT)를 적극 활용한 개발
+- GPT(ChatGPT) 등의 AI를 적극 활용한 개발
 
 을 목표로 제작되었습니다.
 
@@ -36,7 +36,7 @@ Netflix Demo Page를 참고하되, Vue 3 Composition API 기반으로 직접 설
 - **API**: The Movie Database (TMDB)
 - **Deployment**: GitHub Pages (GitHub Actions)
 - **State / Storage**: LocalStorage
-- **AI Tool**: ChatGPT (설계, 디버깅, 리팩토링 지원)
+- **AI Tool**: ChatGPT (설계, 디버깅, 리팩토링 지원), Gemini (설계, 질답)
 
 ---
 
@@ -122,9 +122,6 @@ src/
 - `feature/*` : 기능 단위 개발 브랜치
   - feature/signin
   - feature/tmdb-home
-  - feature/popular
-  - feature/search 등
-
 Pull Request 기반으로 main 브랜치에 병합 후 자동 배포됩니다.
 
 ---
